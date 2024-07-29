@@ -1,0 +1,206 @@
+.container {
+  width: 85vw;
+  height: 100vh;
+  margin-top: 12rem;
+  display: flex;
+}
+.dessert {
+  display: flex;
+  justify-content: space-between;
+
+  &__container {
+    h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin-bottom: 3rem;
+      color: $Rose900;
+      letter-spacing: -1px;
+    }
+  }
+
+  &__box {
+    --auto-grid-min-size: 24rem;
+    display: grid;
+    width: 54vw;
+
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--auto-grid-min-size), 1fr)
+    );
+    grid-gap: 2rem;
+    margin-right: 4rem;
+    span {
+      font-size: 1rem;
+      color: $Rose300;
+    }
+    h3 {
+      margin: 0.5rem 0;
+      color: $Rose900;
+      font-size: 1.6rem;
+    }
+    p {
+      color: $Red;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    li {
+      list-style: none;
+      // text-align: center;
+      font-size: 1.2rem;
+    }
+    img {
+      position: relative;
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__component {
+    width: 25rem;
+    height: 35rem;
+    position: relative;
+
+    .btn.open {
+      background-color: $Red;
+      color: $Rose50;
+    }
+
+    .btn {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: $Rose900;
+      position: absolute;
+      z-index: 999;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1rem 1.5rem;
+      width: 15rem;
+      border-radius: 20px;
+      border: 1px solid $Rose300;
+      transition: all 0.3s ease;
+      background-color: $Rose50;
+
+      img {
+        width: 1.2rem;
+        height: 1.1rem;
+      }
+
+      &:hover {
+        background-color: $Red;
+        transition: all 0.3s ease;
+        color: $Rose50;
+        border: 1px solid $Red;
+        cursor: pointer;
+      }
+
+      .btnCart {
+        align-self: center;
+        position: absolute;
+        left: 20%;
+        top: 27%;
+      }
+
+      .btnMinus {
+        height: 3px;
+        align-self: center;
+        position: absolute;
+        left: 10%;
+        top: 45%;
+      }
+
+      .btnAdd {
+        height: 13px;
+        align-self: center;
+        position: absolute;
+        left: 83%;
+        top: 30%;
+      }
+    }
+  }
+}
+
+.shopping-cart {
+  width: 35rem;
+  height: fit-content;
+  background-color: $Rose50;
+  border-radius: 15px;
+  h1 {
+    color: $Red;
+    font-weight: 900;
+    margin: 2rem;
+  }
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    display: none;
+
+    li {
+      list-style: none;
+    }
+    img {
+      align-self: center;
+      width: 14rem;
+      margin: 3rem 0;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  &__active {
+    margin: 2rem;
+    li {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $Rose900;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $Rose100;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    span {
+      display: flex;
+      margin-bottom: 1rem;
+      .cart1 {
+        color: $Red;
+      }
+      .cart2 {
+        color: $Rose300;
+        font-weight: 200;
+        margin-left: 1.5rem;
+        margin-right: 0.8rem;
+      }
+      .cart3 {
+        color: $Rose500;
+      }
+    }
+    button {
+      margin-left: auto;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid $Rose300;
+      border-radius: 50%;
+      background-color: none;
+      margin-top: -20px;
+      &:hover {
+        cursor: pointer;
+        color: $Rose900;
+      }
+      img {
+        width: 0.9rem;
+        height: 0.9rem;
+      }
+    }
+  }
+}

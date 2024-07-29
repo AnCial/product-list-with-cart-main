@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(13, 31%, 94%);
+}
+
+html {
+  font-family: "Arial", sans-serif;
+  font-size: 62.5%;
+}
+
+.container {
+  width: 85vw;
+  height: 100vh;
+  margin-top: 12rem;
+  display: flex;
+}
+
+.dessert {
+  display: flex;
+  justify-content: space-between;
+}
+.dessert__container h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: hsl(14, 65%, 9%);
+  letter-spacing: -1px;
+}
+.dessert__box {
+  --auto-grid-min-size: 24rem;
+  display: grid;
+  width: 54vw;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 2rem;
+  margin-right: 4rem;
+}
+.dessert__box span {
+  font-size: 1rem;
+  color: hsl(14, 25%, 72%);
+}
+.dessert__box h3 {
+  margin: 0.5rem 0;
+  color: hsl(14, 65%, 9%);
+  font-size: 1.6rem;
+}
+.dessert__box p {
+  color: hsl(14, 86%, 42%);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.dessert__box li {
+  list-style: none;
+  font-size: 1.2rem;
+}
+.dessert__box img {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+.dessert__component {
+  width: 25rem;
+  height: 35rem;
+  position: relative;
+}
+.dessert__component .btn.open {
+  background-color: hsl(14, 86%, 42%);
+  color: hsl(20, 50%, 98%);
+}
+.dessert__component .btn {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: hsl(14, 65%, 9%);
+  position: absolute;
+  z-index: 999;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 1.5rem;
+  width: 15rem;
+  border-radius: 20px;
+  border: 1px solid hsl(14, 25%, 72%);
+  transition: all 0.3s ease;
+  background-color: hsl(20, 50%, 98%);
+}
+.dessert__component .btn img {
+  width: 1.2rem;
+  height: 1.1rem;
+}
+.dessert__component .btn:hover {
+  background-color: hsl(14, 86%, 42%);
+  transition: all 0.3s ease;
+  color: hsl(20, 50%, 98%);
+  border: 1px solid hsl(14, 86%, 42%);
+  cursor: pointer;
+}
+.dessert__component .btn .btnCart {
+  align-self: center;
+  position: absolute;
+  left: 20%;
+  top: 27%;
+}
+.dessert__component .btn .btnMinus {
+  height: 3px;
+  align-self: center;
+  position: absolute;
+  left: 10%;
+  top: 45%;
+}
+.dessert__component .btn .btnAdd {
+  height: 13px;
+  align-self: center;
+  position: absolute;
+  left: 83%;
+  top: 30%;
+}
+
+.shopping-cart {
+  width: 35rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: hsl(20, 50%, 98%);
+  border-radius: 15px;
+}
+.shopping-cart h1 {
+  color: hsl(14, 86%, 42%);
+  font-weight: 900;
+  margin: 2rem;
+}
+.shopping-cart__empty {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  display: none;
+}
+.shopping-cart__empty li {
+  list-style: none;
+}
+.shopping-cart__empty img {
+  align-self: center;
+  width: 14rem;
+  margin: 3rem 0;
+}
+.shopping-cart__empty p {
+  text-align: center;
+}
+.shopping-cart__active {
+  margin: 2rem;
+}
+.shopping-cart__active li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: hsl(14, 65%, 9%);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid hsl(13, 31%, 94%);
+}
+.shopping-cart__active p {
+  margin-bottom: 1rem;
+}
+.shopping-cart__active span {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.shopping-cart__active span .cart1 {
+  color: hsl(14, 86%, 42%);
+}
+.shopping-cart__active span .cart2 {
+  color: hsl(14, 25%, 72%);
+  font-weight: 200;
+  margin-left: 1.5rem;
+  margin-right: 0.8rem;
+}
+.shopping-cart__active span .cart3 {
+  color: hsl(12, 20%, 44%);
+}
+.shopping-cart__active button {
+  margin-left: auto;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid hsl(14, 25%, 72%);
+  border-radius: 50%;
+  background-color: none;
+  margin-top: -20px;
+}
+.shopping-cart__active button:hover {
+  cursor: pointer;
+  color: hsl(14, 65%, 9%);
+}
+.shopping-cart__active button img {
+  width: 0.9rem;
+  height: 0.9rem;
+}
